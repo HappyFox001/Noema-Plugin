@@ -2,6 +2,42 @@
   "schemaVersion": 1,
   "plugins": [
     {
+      "id": "browser-use",
+      "name": "Browser Use",
+      "version": "0.1.0",
+      "description": "Provides Electron browser automation tools for page state, real input, uploads, screenshots, and text extraction.",
+      "path": "plugins/browser-use",
+      "manifest": "plugins/browser-use/plugin.json",
+      "tags": ["browser", "automation", "tools", "built-in"]
+    },
+    {
+      "id": "computer-use",
+      "name": "Computer Use",
+      "version": "0.1.0",
+      "description": "Provides native desktop control tools including screenshots, mouse, keyboard, shortcuts, scrolling, and waiting.",
+      "path": "plugins/computer-use",
+      "manifest": "plugins/computer-use/plugin.json",
+      "tags": ["desktop", "automation", "tools", "built-in"]
+    },
+    {
+      "id": "fish-s2-emotion",
+      "name": "Fish Audio S2 Emotion Enhancer",
+      "version": "0.2.0",
+      "description": "Adds controlled voice cue rules for Fish Audio S2 models and hides TTS control tags from display and memory.",
+      "path": "plugins/fish-s2-emotion",
+      "manifest": "plugins/fish-s2-emotion/plugin.json",
+      "tags": ["tts", "voice", "emotion", "built-in"]
+    },
+    {
+      "id": "live2d-avatar",
+      "name": "Live2D Avatar",
+      "version": "0.1.0",
+      "description": "Loads a configurable Live2D Cubism avatar and maps Noema state updates to motions, expressions, pose, and lip sync.",
+      "path": "plugins/live2d-avatar",
+      "manifest": "plugins/live2d-avatar/plugin.json",
+      "tags": ["avatar", "live2d", "ui", "built-in"]
+    },
+    {
       "id": "mcp-manager",
       "name": "MCP Manager",
       "version": "0.1.0",
