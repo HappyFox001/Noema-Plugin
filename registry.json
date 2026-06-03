@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "mcp-manager",
+      "name": "MCP Manager",
+      "version": "0.1.0",
+      "description": "Connects and schedules MCP servers during task runtime.",
+      "path": "plugins/mcp-manager",
+      "manifest": "plugins/mcp-manager/plugin.json",
+      "tags": ["mcp", "tools", "runtime"]
+    },
+    {
+      "id": "skills-manager",
+      "name": "Skills Manager",
+      "version": "0.1.0",
+      "description": "Manages and retrieves local Skills during task runtime.",
+      "path": "plugins/skills-manager",
+      "manifest": "plugins/skills-manager/plugin.json",
+      "tags": ["skills", "tools", "runtime"]
+    },
+    {
+      "id": "sticker-expression",
+      "name": "Sticker Expression",
+      "version": "0.1.0",
+      "description": "Displays stickers based on emotion tags in replies.",
+      "path": "plugins/sticker-expression",
+      "manifest": "plugins/sticker-expression/plugin.json",
+      "tags": ["expression", "sticker", "ui"]
+    }
+  ]
+}

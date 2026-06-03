@@ -1,7 +1,8 @@
 # Noema Plugin
 
-External runtime plugin workspace for Noema.
+Public plugin source repository for Noema.
 
-- `option/`: optional plugins kept outside the main application repository.
+- `registry.json`: searchable plugin index for the Noema control panel.
+- `plugins/`: source packages for plugins that can be fetched and installed by Noema.
 
-Noema currently discovers external plugins from this directory when running from the sibling `Noema` project.
+During local development, Noema can also discover plugins directly from `plugins/` when this repository is checked out next to the main `Noema` project.
