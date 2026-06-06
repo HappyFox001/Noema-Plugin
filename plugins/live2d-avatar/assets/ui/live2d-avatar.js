@@ -105,6 +105,7 @@ const state = {
     expressions: new Set(),
     lipSyncParameters: [],
   },
+  fitFrame: 0,
 }
 
 const canvas = document.getElementById('stage')
@@ -123,7 +124,7 @@ window.addEventListener('message', (event) => {
   if (event.data.config && typeof event.data.config === 'object') {
     state.config = normalizeConfig({ ...state.config, ...event.data.config })
     syncPointerTrackingState()
-    fitModel()
+    scheduleFitModel()
   }
   applyNoemaState(event.data.state)
 })
@@ -203,7 +204,7 @@ async function loadModel(modelUrl) {
   registerParameterHook()
   ensureAvatarTicker()
   syncPointerTrackingState()
-  fitModel()
+  scheduleFitModel()
 }
 
 function registerParameterHook() {
@@ -459,6 +460,9 @@ function fitModel() {
   }
   const width = state.app.screen.width
   const height = state.app.screen.height
+  if (width < 2 || height < 2 || window.innerWidth < 2 || window.innerHeight < 2) {
+    return
+  }
   const scale = state.config.autoFit
     ? getFittedScale(width, height) * state.config.scale
     : state.config.scale
@@ -467,13 +471,27 @@ function fitModel() {
   state.model.y = height / 2 + state.config.offsetY
 }
 
+function scheduleFitModel() {
+  if (state.fitFrame) {
+    cancelAnimationFrame(state.fitFrame)
+  }
+  state.fitFrame = requestAnimationFrame(() => {
+    state.fitFrame = requestAnimationFrame(() => {
+      state.fitFrame = 0
+      fitModel()
+    })
+  })
+}
+
 function resize() {
   const nextResolution = Math.max(1, Math.min(3, window.devicePixelRatio || 1))
   if (state.app?.renderer && state.app.renderer.resolution !== nextResolution) {
     state.app.renderer.resolution = nextResolution
   }
-  state.app?.renderer?.resize?.(window.innerWidth, window.innerHeight)
-  fitModel()
+  if (window.innerWidth >= 2 && window.innerHeight >= 2) {
+    state.app?.renderer?.resize?.(window.innerWidth, window.innerHeight)
+  }
+  scheduleFitModel()
 }
 
 function readInitialConfig() {

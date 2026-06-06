@@ -6,6 +6,12 @@
       "name": "Browser Use",
       "version": "0.1.0",
       "description": "Provides Electron browser automation tools for page state, real input, uploads, screenshots, and text extraction.",
+      "i18n": {
+        "zh-CN": {
+          "name": "浏览器自动化",
+          "description": "提供 Electron 浏览器自动化工具，支持页面状态读取、真实输入、文件上传、截图和文本提取。"
+        }
+      },
       "path": "plugins/browser-use",
       "manifest": "plugins/browser-use/plugin.json",
       "tags": ["browser", "automation", "tools", "built-in"]
@@ -15,6 +21,12 @@
       "name": "Computer Use",
       "version": "0.1.0",
       "description": "Provides native desktop control tools including screenshots, mouse, keyboard, shortcuts, scrolling, and waiting.",
+      "i18n": {
+        "zh-CN": {
+          "name": "电脑控制",
+          "description": "提供原生桌面控制工具，包括截图、鼠标、键盘、快捷键、滚动和等待。"
+        }
+      },
       "path": "plugins/computer-use",
       "manifest": "plugins/computer-use/plugin.json",
       "tags": ["desktop", "automation", "tools", "built-in"]
@@ -24,6 +36,12 @@
       "name": "Fish Audio S2 Emotion Enhancer",
       "version": "0.2.0",
       "description": "Adds controlled voice cue rules for Fish Audio S2 models and hides TTS control tags from display and memory.",
+      "i18n": {
+        "zh-CN": {
+          "name": "Fish Audio S2 情绪增强",
+          "description": "为 Fish Audio S2 模型加入受控语音提示规则，并从展示和记忆中隐藏 TTS 控制标签。"
+        }
+      },
       "path": "plugins/fish-s2-emotion",
       "manifest": "plugins/fish-s2-emotion/plugin.json",
       "tags": ["tts", "voice", "emotion", "built-in"]
@@ -33,6 +51,12 @@
       "name": "Live2D Avatar",
       "version": "0.1.0",
       "description": "Loads a configurable Live2D Cubism avatar and maps Noema state updates to motions, expressions, pose, and lip sync.",
+      "i18n": {
+        "zh-CN": {
+          "name": "Live2D 形象",
+          "description": "加载可配置的 Live2D Cubism 形象，并将 Noema 状态映射到动作、表情、姿态和口型同步。"
+        }
+      },
       "path": "plugins/live2d-avatar",
       "manifest": "plugins/live2d-avatar/plugin.json",
       "tags": ["avatar", "live2d", "ui", "built-in"]
@@ -42,6 +66,12 @@
       "name": "MCP Manager",
       "version": "0.1.0",
       "description": "Connects and schedules MCP servers during task runtime.",
+      "i18n": {
+        "zh-CN": {
+          "name": "MCP 管理器",
+          "description": "在任务运行时连接并调度 MCP 服务器。"
+        }
+      },
       "path": "plugins/mcp-manager",
       "manifest": "plugins/mcp-manager/plugin.json",
       "tags": ["mcp", "tools", "runtime"]
@@ -51,6 +81,12 @@
       "name": "Skills Manager",
       "version": "0.1.0",
       "description": "Manages and retrieves local Skills during task runtime.",
+      "i18n": {
+        "zh-CN": {
+          "name": "Skills 管理器",
+          "description": "在任务运行时管理并检索本地 Skills。"
+        }
+      },
       "path": "plugins/skills-manager",
       "manifest": "plugins/skills-manager/plugin.json",
       "tags": ["skills", "tools", "runtime"]
@@ -60,6 +96,12 @@
       "name": "Sticker Expression",
       "version": "0.1.0",
       "description": "Displays stickers based on emotion tags in replies.",
+      "i18n": {
+        "zh-CN": {
+          "name": "贴纸表情",
+          "description": "根据回复中的情绪标签展示贴纸表情。"
+        }
+      },
       "path": "plugins/sticker-expression",
       "manifest": "plugins/sticker-expression/plugin.json",
       "tags": ["expression", "sticker", "ui"]
